@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<FileZilla3 version="3.46.0" platform="windows">
+	<Servers>
+		<Server>
+			<Host>host1</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>4</Type>
+			<User>dubiny5</User>
+			<Logontype>2</Logontype>
+			<TimezoneOffset>0</TimezoneOffset>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<MaximumMultipleConnections>0</MaximumMultipleConnections>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>dev</Name>
+			<Comments />
+			<Colour>0</Colour>
+			<LocalDir />
+			<RemoteDir>4 1 . 4 PROJ 7 USER</RemoteDir>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>host1</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>4</Type>
+			<User>dubiny5</User>
+			<Logontype>2</Logontype>
+			<TimezoneOffset>0</TimezoneOffset>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<MaximumMultipleConnections>0</MaximumMultipleConnections>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>devT</Name>
+			<Comments />
+			<Colour>0</Colour>
+			<LocalDir />
+			<RemoteDir>4 1 . 4 PROJ 7 USER</RemoteDir>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+			          <PostLoginCommands>
+              <Command> SITE TRAILINGBLANKS</Command>
+            </PostLoginCommands>
+ 
+		</Server>
+	</Servers>
+</FileZilla3>
