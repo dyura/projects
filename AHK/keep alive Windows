@@ -1,0 +1,18 @@
+:start
+timeout 180
+C:\Users\329160378\data\AH\AutoHotkeyU32.exe C:\Users\329160378\LAUNCH\keep-alive.txt
+goto :start 
+
+
+C:\Users\329160378\LAUNCH\keep-alive.txt :
+
+;keep-alive.txt 
+;SetTimer, MoveMouse, 2000 ; Run MoveMouse every 1 minute
+ 
+MoveMouse:
+   ; MsgBox, You entered 
+    MouseMove, 1, 0, 1, R  ;Move the mouse one pixel to the right
+    MouseMove, -1, 0, 1, R ;Move the mouse back one pixel
+   ; MsgBox, You exit
+return 
+
