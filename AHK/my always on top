@@ -1,0 +1,80 @@
+Menu, tray, add, Help, MenuHandler 
+level=100 
+level2=230 
+return 
+
+#a:: 
+InputBox,Level,default transparency,from 0 to 250,60,140 
+msgbox,%level% 
+if level= 
+return 
+
+#space::WinSet, Transparent, %level%, A 
+#1::WinSet, Transparent, off, A 
+
+!#space:: 
+InputBox,var1,for this window,from 0 to 250,460,140 
+msgbox,%var1% 
+WinSet, Transparent, %var1%, A 
+return 
+
+
+MenuHandler: 
+msgbox on-top & transparent: ^space-toggle (default transparency,230), #z-change default value, ^!space on top with specified transparency for this windows`nset tansparency: #space-transparent on with default (100), #1-transparency off, #a-change default,#!space-set specified transparency for this window `nkeys: (#-Windows, ^-ctrl, !-alt) 
+return 
+
+^space:: 
+
+WinGet, currentWindow, ID, A 
+
+WinGet, ExStyle, ExStyle, ahk_id %currentWindow% 
+
+if (ExStyle & 0x8) ; 0x8 is WS_EX_TOPMOST. 
+
+{ 
+
+Winset, AlwaysOnTop, off, ahk_id %currentWindow% 
+WinSet, Transparent, off, A 
+
+SplashImage,, x0 y0 b fs12, OFF always on top. 
+
+Sleep, 1500 
+
+SplashImage, Off 
+
+} 
+
+else 
+
+{ 
+
+WinSet, AlwaysOnTop, on, ahk_id %currentWindow% 
+WinSet, Transparent, %level2%, A 
+
+SplashImage,,x0 y0 b fs12, ON always on top. 
+
+Sleep, 1500 
+
+SplashImage, Off 
+
+} 
+
+return 
+
+^!space:: 
+InputBox,var1,tran on top this,0-250,60,90 
+msgbox,%var1% 
+WinSet, AlwaysOnTop, on, ahk_id %currentWindow% 
+WinSet, Transparent, %var1%, A 
+
+SplashImage,,x0 y0 b fs12, ON always on top. 
+
+Sleep, 1500 
+
+SplashImage, Off 
+return 
+
+#z:: 
+InputBox,level2,tran on top default,0-250,100,100 
+msgbox,%level2% 
+return 
