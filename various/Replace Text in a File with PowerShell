@@ -1,0 +1,15 @@
+((Get-Content -path C:\ReplaceDemo.txt -Raw) -replace 'brown','white') | Set-Content -Path C:\ReplaceDemo.txt
+
+works good
+or
+
+(Get-Content c:\temp\test.txt) -replace '\[MYID\]', 'MyValue' | Set-Content c:\temp\test.txt
+
+or 
+
+function Replace-AllStringsInFile($SearchString,$ReplaceString,$FullPathToFile)
+{
+    $content = [System.IO.File]::ReadAllText("$FullPathToFile").Replace("$SearchString","$ReplaceString")
+    [System.IO.File]::WriteAllText("$FullPathToFile", $content)
+}
+
