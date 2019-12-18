@@ -1,0 +1,17 @@
+; use {} for escape special characters like word{#}
+; CNTRL+SHIFT
+^+1:: InputBox, A1, 1, passwrd
+^+2:: InputBox, A2, 2, passwrd
+^+3:: InputBox, A3, 3, passwrd
+^+4:: InputBox, A4, 4, passwrd
+^+5:: InputBox, A5, 5, passwrd
+^+6:: InputBox, A6, 6, passwrd
+^+7:: InputBox, A7, 7, passwrd
+ ; CNTRL+SHIFT+ALT
+^!+1:: Send %A1%
+^!+2:: Send %A2%
+^!+3:: Send %A3%
+^!+4:: Send %A4%
+^!+5:: Send %A5%
+^!+6:: Send %A6%
+^!+7:: Send %A7%
