@@ -1,0 +1,6 @@
+:beg
+cls
+time /T
+timeout /t 30  /NOBREAK > nul 
+REM timeout /t 60  /NOBREAK  > nul 
+goto :beg
