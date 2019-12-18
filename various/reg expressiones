@@ -1,0 +1,11 @@
+in Notepad++
+^(.*?)$\s+?^(?=.*^\1$)
+duplicated lines
+select matches newline
+
+for wrapping transaction list from PDF (\$[0-9]+\.[0-9][0-9])  <-> \1\n
+or  \$\d+\.\d{2}
+
+In Oracle
+regexp_like(a,'\ +');  blank columns 
+not regexp_like(TABLE_NAME,'.*[0123456789]'))  not finishing with digits
