@@ -1,0 +1,4 @@
+=NOT(ISERROR(MATCH(last!B1,prev!B:B,0)))
+
+Format for Sun,Jan-1-00
+ddd,mmm-d-yy
